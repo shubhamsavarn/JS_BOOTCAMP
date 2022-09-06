@@ -9,12 +9,13 @@ function countDown() {
     const newYearDate = new Date(newYear);
     const curentDate = new Date();
     const totalSecond = (newYearDate-curentDate)/1000;
-    const days = Math.floor(totalSecond/3600)/24;
+    const days = Math.floor(totalSecond/3600/24);
     const hours = Math.floor(totalSecond/3600)%24;
     const mins = Math.floor(totalSecond/60)%60;
     const seconds = Math.floor(totalSecond)%60;
+    
 
-    daysEl.innerHTML = days;
+    daysEl.innerHTML = days;    
     hoursEl.innerHTML = hours;
     minsEl.innerHTML = mins;
     secondsEl.innerHTML = seconds;
